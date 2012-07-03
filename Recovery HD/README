@@ -1,0 +1,6 @@
+To use this Makefile, you need to:
+
+1.  Grab dmtest from Lion Recovery Update v1.0 http://support.apple.com/kb/DL1464 and copy it to the same directory as the Makefile.  pkgutil --expand RecoveryHDUpdate.pkg RecoveryUpdate.  Path to dmtest will be /RecoveryUpdate/RecoveryHDUpdate.pkg/Scripts/Tools
+2.  Copy BaseSystem.chunklist and BaseSystem.dmg from the InstallESD.dmg to the same directory as the Makefile.  These are hidden so you will need to chflags nohidden the files after copying them locally.
+3.  Customize the Reverse domain for you company
+4.  Set Package_Version with the appropriate build number

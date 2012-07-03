@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/private/tmp/dmtest ensureRecoveryPartition / /private/tmp/BaseSystem.dmg 0 0 /private/tmp/BaseSystem.chunklist

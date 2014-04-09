@@ -1,7 +1,7 @@
 USE_PKGBUILD=1
 include /usr/local/share/luggage/luggage.make
 TITLE=MacVector
-REVERSE_DOMAIN=org.mskcc
+REVERSE_DOMAIN=com.company
 PACKAGE_VERSION=13.0
 PAYLOAD=\
 	unpack-macvector\

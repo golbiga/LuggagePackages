@@ -1,5 +1,19 @@
 #!/bin/sh
 
+# If older version of MacVector is installed, lets remove it
+
 if [ -d "$3/Applications/MacVector" ]; then
-   rm -rf "$3/Applications/MacVector"
+	rm -rf "$3/Applications/MacVector"
+fi
+
+# Same goes for old license file
+
+if [ -d "$3/Library/Application Support/MacVector" ]; then
+	rm -rf "$3/Library/Application Support/MacVector"
+fi
+
+# And for the helper tool
+
+if [ -f "$3/Library/PrivilegedHelperTools/com.macvector.MacVectorHelper" ]; then
+	rm -rf "$3/Library/PrivilegedHelperTools/com.macvector.MacVectorHelper"
 fi

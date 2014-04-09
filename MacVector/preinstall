@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -d "$3/Applications/MacVector" ]; then
+   rm -rf "$3/Applications/MacVector"
+fi

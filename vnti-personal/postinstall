@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Copy license file to User Template
+mkdir "$3/System/Library/User Template/English.lproj/.vnti"
+ditto "$3/private/tmp/designer-personal.lic" "$3/System/Library/User Template/English.lproj/.vnti"
+chown -R root:wheel "$3/System/Library/User Template/English.lproj/Library/Preferences"
+chmod 644 "$3/System/Library/User Template/English.lproj/.vnti/designer-personal.lic"
+
+# Copy license file to existing Users
+for i in $(/bin/ls /Users | sed -e '/Shared/d' -e '/Deleted Users/d' -e '/.localized/d' -e '/.DS_Store/d' -e '/.com.apple.timemachine.supported/d' -e '/Adobe/d' -e '/Library/d');
+do
+	if [ ! -f "$3/Users/$i/.vnti/designer-personal.lic" ]; then
+		mkdir "$3/Users/$i/.vnti"
+		ditto "$3/private/tmp/designer-personal.lic" "$3/Users/$i/.vnti"
+		echo "Copying license file to $i"
+		chown -R $i:staff "$3/Users/$i/.vnti"
+		chmod 644 "$3/Users/$i/.vnti/designer-personal.lic"
+	else
+		echo "License file is already present"
+	fi
+done
+
+# Remove license file from /private/tmp
+rm "$3/private/tmp/designer-personal.lic"
+
+exit 0

@@ -1,7 +1,7 @@
 USE_PKGBUILD=1
 include /usr/local/share/luggage/luggage.make
-TITLE=vnti
-REVERSE_DOMAIN=org.mskcc
+TITLE=vnti-community
+REVERSE_DOMAIN=com.company
 PACKAGE_VERSION=1.0.3
 PAYLOAD=\
 	unbz2-applications-Vector_NTI_Express_Designer.app \

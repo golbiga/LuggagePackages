@@ -1,6 +1,6 @@
 USE_PKGBUILD=1
 include /usr/local/share/luggage/luggage.make
-TITLE=vnti-community
+TITLE=vector_nti-community
 REVERSE_DOMAIN=com.company
 PACKAGE_VERSION=1.0.3
 PAYLOAD=\

@@ -1,0 +1,22 @@
+#!/bin/sh
+## postinstall
+
+# Dittos the new Automator, QuickLook and Spotlight plugins to the correct folders
+
+if [ -d "$3/Library/Application Support/Automator" ]; then
+	ditto "$3/Applications/Prism 6.app/Contents/Library/Automator/Run GraphPad Prism Script.action" "$3/Library/Automator/Run GraphPad Prism Script.action"
+	chown root:admin "$3/Library/Automator/Run GraphPad Prism Script.action"
+	echo "Copying Prism Automator Script"
+fi
+
+if [ -d "$3/Library/Application Support/QuickLook" ]; then
+	ditto "$3/Applications/Prism 6.app/Contents/Library/QuickLook/GraphPad Prism.qlgenerator" "$3/Library/QuickLook/GraphPad Prism.qlgenerator"
+	chown root:wheel "$3/Library/QuickLook/GraphPad Prism.qlgenerator"
+	echo "Copying Prism QuickLook Generator"
+fi
+
+if [ -d "$3/Library/Application Support/Spotlight" ]; then
+	ditto "$3/Applications/Prism 6.app/Contents/Library/Spotlight/GraphPad Prism.mdimporter" "$3/Library/Spotlight/GraphPad Prism.mdimporter"
+	chown root:wheel "$3/Library/Spotlight/GraphPad Prism.mdimporter"
+	echo "Copying Prism Spotlight importer"
+fi

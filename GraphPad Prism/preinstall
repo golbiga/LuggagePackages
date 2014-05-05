@@ -1,0 +1,37 @@
+#!/bin/sh
+## preinstall
+
+# Remove existing copy of GraphPad Prism 6.0 from /Applications
+
+if [ -d "$3/Applications/Prism 6.app" ]; then
+	rm -rf "$3/Applications/Prism 6.app"
+	echo "Prism 6.app has been removed"
+fi
+
+# Remove existing copy of GraphPad folder in /Library/Application Support
+
+if [ -d "$3/Library/Application Support/GraphPad" ]; then
+	rm -rf "$3/Library/Application Support/GraphPad"
+	echo "GraphPad folder in /L/AS t has been removed"
+fi
+
+# Remove existing copy of GraphPad Prism Automator Scripts
+
+if [ -d "$3/Library/Automator/Run GraphPad Prism Scrip.action" ]; then
+	rm -rf "$3/Library/Automator/Run GraphPad Prism Scrip.action"
+	echo "Automator Script has been removed"
+fi
+
+# Remove existing copy of GraphPad Prism QuickLook Plugin
+
+if [ -d "$3/Library/QuickLook/GraphPad Prism.qlgenerator" ]; then
+	rm -rf "$3/Library/QuickLook/GraphPad Prism.qlgenerator"
+	echo "QuickLook Plugin has been removed"
+fi
+
+# Remove existing copy of GraphPad Prism Spotlight Plugin
+
+if [ -d "$3/Library/Spotlight/GraphPad Prism.mdimporter" ]; then
+	rm -rf "$3/Library/Spotlight/GraphPad Prism.mdimporter"
+	echo "Spotlight plugin has been removed"
+fi

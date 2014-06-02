@@ -12,13 +12,13 @@ fi
 
 if [ -d "$3/Library/Application Support/GraphPad" ]; then
 	rm -rf "$3/Library/Application Support/GraphPad"
-	echo "GraphPad folder in /L/AS t has been removed"
+	echo "GraphPad folder in /L/AS has been removed"
 fi
 
 # Remove existing copy of GraphPad Prism Automator Scripts
 
-if [ -d "$3/Library/Automator/Run GraphPad Prism Scrip.action" ]; then
-	rm -rf "$3/Library/Automator/Run GraphPad Prism Scrip.action"
+if [ -d "$3/Library/Automator/Run GraphPad Prism Script.action" ]; then
+	rm -rf "$3/Library/Automator/Run GraphPad Prism Script.action"
 	echo "Automator Script has been removed"
 fi
 
